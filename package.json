@@ -2,7 +2,7 @@
   "name": "ionic2-meteor",
   "version": "0.0.1",
   "description": "Use meteor in ionic2 applications unsing angular2",
-  "main": "meteor-app.js",
+  "main": "dist/meteor_app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -24,7 +24,8 @@
     "url": "https://github.com/domenukk/ionic2-meteor/issues"
   },
   "homepage": "https://github.com/domenukk/ionic2-meteor#readme",
-  "dependencies": {
+  "dependencies": {},
+  "realDependencies": {
     "angular2": "^2.0.0-beta.1",
     "angular2-meteor-client": "^0.3.6",
     "ionic-framework": "^2.0.0-alpha.49",

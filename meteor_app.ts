@@ -28,14 +28,15 @@ import {App} from "ionic-framework/ionic";
  * @param {String} [templateUrl] - a relative URL pointing to the template to use for the app root
  *
  */
-function MeteorApp(args) {
-  const providers = [];
-  if (args && args.providers) {
-    providers.concat(args.providers);
-  }
-  providers.concat(MeteorProviders);
-  args.providers = providers;
-  App(args);
-}
 
-export var MeteorApp = MeteorApp;
+export function MeteorApp(args: any={}) {
+  return function(cls) {
+    const providers = [];
+    if (args && args.providers) {
+      providers.concat(args.providers);
+    }
+    providers.concat(MeteorProviders);
+    args.providers = providers;
+    return App(args)(cls);
+  }
+}
