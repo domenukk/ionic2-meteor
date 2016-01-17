@@ -31,12 +31,10 @@ import {App} from "ionic-framework/ionic";
 
 export function MeteorApp(args: any={}) {
   return function(cls) {
-    const providers = [];
-    if (args && args.providers) {
-      providers.concat(args.providers);
+    if (!args.providers) {
+      args.providers = [];
     }
-    providers.concat(MeteorProviders);
-    args.providers = providers;
+    args.providers = args.providers.concat(MeteorProviders);
     return App(args)(cls);
   }
 }

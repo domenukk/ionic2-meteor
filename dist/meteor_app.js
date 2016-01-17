@@ -30,12 +30,10 @@ var ionic_1 = require("ionic-framework/ionic");
 function MeteorApp(args) {
     if (args === void 0) { args = {}; }
     return function (cls) {
-        var providers = [];
-        if (args && args.providers) {
-            providers.concat(args.providers);
+        if (!args.providers) {
+            args.providers = [];
         }
-        providers.concat(angular2_meteor_client_1.MeteorProviders);
-        args.providers = providers;
+        args.providers = args.providers.concat(angular2_meteor_client_1.MeteorProviders);
         return ionic_1.App(args)(cls);
     };
 }
