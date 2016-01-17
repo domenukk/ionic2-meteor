@@ -1,6 +1,6 @@
 {
   "name": "ionic2-meteor",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Use meteor in ionic2 applications unsing angular2",
   "main": "dist/meteor_app.js",
   "scripts": {
